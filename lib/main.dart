@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'views/decklist.dart';
+import 'views/deck_list.dart';
 
 void main() async {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
+  runApp(MaterialApp(
+    theme: ThemeData(
+      primarySwatch: Colors.green, // Set primary color to green
+    ),
     home: DeckList(),
+    debugShowCheckedModeBanner: false,
   ));
 }

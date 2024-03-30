@@ -1,3 +1,5 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12404965&assignment_repo_type=AssignmentRepo)
+
 # CS 442 MP3: Flashcards
 
 ## 1. Overview
@@ -34,7 +36,7 @@ Note that as the screen size increases, you may wish to have your UI respond by 
 
 #### 2.2.1 Deck list page
 
-The default entry page of the app should display a scrollable list of decks, identified by their titles and listed in the order they were created. The current number of cards in the deck should also be displayed alongside the deck title (this isn't shown in the demo video!). Tapping on a deck should take you to its associated card list. There should be a secondary tap target (e.g., an icon or button) for each deck that should allow you to edit and/or delete it.
+The default entry page of the app should display a scrollable list of decks, identified by their titles and listed in the order they were created. The current number of cards in the deck should also be displayed alongside the deck name (this isn't shown in the demo video!). Tapping on a deck should take you to its associated card list. There should be a secondary tap target (e.g., an icon or button) for each deck that should allow you to edit and/or delete it.
 
 There should be a button or menu item for creating a new deck, which should take you to the deck editor screen.
 
@@ -112,7 +114,7 @@ Your app should not cause the UI to block while performing any asynchronous oper
 
 ## 3. Testing
 
-We will be testing your application by building and running it as either a native macOS, Android, or iOS app. Your app should run without errors or warnings, and should behave as specified above. Note that because of SQLite and other platform-specific dependencies, you **should not expect your app to run in a web browser or as a native Windows app**.
+We will be testing your application by building and running it as either a native macOS, Android, or iOS app. Your app should run without errors or warnings, and should behave as specified above.
 
 The minimum screen size we will test on is 320x568 logical pixels (iPhone 5), and the maximum screen size we will test on is 1920x1080 logical pixels (1080p). Your app should be responsive to and display correctly (without overflow errors) on all screen sizes in between.
 
