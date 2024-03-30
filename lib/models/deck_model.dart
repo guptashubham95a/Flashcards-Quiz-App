@@ -1,4 +1,4 @@
-import '../models/flash_card.dart';
+import 'flash_card_model.dart';
 
 class Deck {
   int id;

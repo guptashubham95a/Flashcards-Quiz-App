@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:mp3/models/deck.dart';
+import 'package:mp3/models/deck_model.dart';
 import 'package:mp3/snack_bar.dart';
 import '../views/new_deck_screen.dart';
 

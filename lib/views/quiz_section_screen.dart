@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mp3/models/flash_card.dart';
+import 'package:mp3/models/flash_card_model.dart';
 import 'package:mp3/utils/db_helper.dart';
 
 class QuizScreen extends StatefulWidget {
@@ -24,18 +24,18 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    _fetchDeckTitle();
-    fetchAndShuffleFlashcards();
+    _getDeckTitle();
+    getShuffledFlashcards();
   }
 
-  Future<void> _fetchDeckTitle() async {
+  Future<void> _getDeckTitle() async {
     final title = await DBHelper().fetchDeckTitle(widget.deckId);
     setState(() {
       deckTitle = title;
     });
   }
 
-  void fetchAndShuffleFlashcards() async {
+  void getShuffledFlashcards() async {
     final fetchedFlashcards = await DBHelper().fetchCardsForDeck(widget.deckId);
     if (fetchedFlashcards.isNotEmpty) {
       setState(() {
@@ -44,7 +44,7 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
-  void showNextCard() {
+  void viewNextCard() {
     if (currentIndex < flashcards.length - 1) {
       setState(() {
         currentIndex++;
@@ -62,7 +62,7 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
-  void showPreviousCard() {
+  void viewPreviousCard() {
     if (currentIndex > 0) {
       setState(() {
         currentIndex--;
@@ -86,7 +86,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Set<int> viewedAnswers = Set();
 
-  void toggleAnswerVisibility() {
+  void changeAnswerVisibility() {
     setState(() {
       if (!isAnswerShowing) {
         if (!viewedAnswers.contains(currentIndex)) {
@@ -125,14 +125,14 @@ class _QuizScreenState extends State<QuizScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     GestureDetector(
-                      onTap: showPreviousCard,
+                      onTap: viewPreviousCard,
                       child: const MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: Icon(Icons.swipe_left_rounded),
                       ),
                     ),
                     GestureDetector(
-                      onTap: toggleAnswerVisibility,
+                      onTap: changeAnswerVisibility,
                       child: MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: Icon(
@@ -143,7 +143,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: showNextCard,
+                      onTap: viewNextCard,
                       child: const MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: Icon(Icons.swipe_right_rounded),

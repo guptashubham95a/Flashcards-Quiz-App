@@ -1,7 +1,7 @@
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:mp3/models/flash_card.dart';
+import 'package:mp3/models/flash_card_model.dart';
 
 /// This class provides methods to interact with a SQLite database to perform CRUD operations
 /// for managing decks and flashcards.

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mp3/models/flash_card.dart';
+import 'package:mp3/models/flash_card_model.dart';
 import 'package:mp3/snack_bar.dart';
 import 'package:mp3/utils/db_helper.dart';
 

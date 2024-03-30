@@ -1,4 +1,4 @@
-import 'package:mp3/models/flash_card.dart';
+import 'package:mp3/models/flash_card_model.dart';
 
 /// Represents a quiz session consisting of a list of flashcards.
 

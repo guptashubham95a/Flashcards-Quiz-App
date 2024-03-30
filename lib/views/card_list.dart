@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mp3/utils/db_helper.dart';
-import 'package:mp3/models/flash_card.dart';
+import 'package:mp3/models/flash_card_model.dart';
 import '../views/flash_card_editor.dart';
 import '../views/new_flashcard.dart';
 import '../views/quiz_section_screen.dart';
@@ -138,6 +138,7 @@ class _CardListScreenState extends State<CardListScreen> {
                           overflow:
                               TextOverflow.ellipsis, // Set overflow property
                           maxLines: 2,
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
