@@ -112,7 +112,7 @@ class _QuizScreenState extends State<QuizScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Card ${currentIndex + 1} of ${flashcards.length}',
+                  'Card ${currentIndex + 1} of Total ${flashcards.length} Cards.',
                   style: const TextStyle(fontSize: 18),
                 ),
                 const SizedBox(height: 20),

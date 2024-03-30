@@ -107,7 +107,6 @@ class DBHelper {
     };
 
     final cardId = await db.insert('flashcards', card);
-    print('Inserted card with ID: $cardId');
     return cardId;
   }
 
